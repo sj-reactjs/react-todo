@@ -11,3 +11,45 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.todo-app.theme-dark {
+  background-color: black;
+  color: #fff;
+}
+
+.todo-app.theme-light {
+  background-color: #fff;
+  color: #000;
+}
+
+.todo-app.theme-dark .todo-card {
+  width: 16.66%;
+  box-shadow: 0 4px 8px 0 rgb(255 255 255 / 40%);
+  margin: 1%;
+  /* border: 1px solid; */
+  padding: 1%;
+}
+.todo-app.theme-dark .todo-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(255,255,255,0.4);
+}
+
+.todo-app.theme-light .todo-card {
+  width: 16.66%;
+  box-shadow: 0 4px 8px 0 rgb(0,0,0, 0.4);
+  margin: 1%;
+  /* border: 1px solid; */
+  padding: 1%;
+}
+
+.todo-app.theme-light .todo-card {
+  box-shadow: black;
+}
+
+.todo-app.theme-light .todo-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4);
+}
+
+.right{
+  display: grid;
+  justify-content: right;
+}
