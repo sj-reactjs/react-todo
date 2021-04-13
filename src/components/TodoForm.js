@@ -1,50 +1,77 @@
-import React from 'react'
-import useFormData from './../hooks/useFormData'
+import React, { useState } from 'react'
+// import useFormData from './../hooks/useFormData'
 import { TodoDataContext } from './../context/dataContext'
 
 function TodoForm() {
-    const [todoForm, setTodoForm] = useFormData()
+    const defaultFormData = {
+        task: "",
+        description: '',
+        status: ''
+    }
+
+    const [form, setForm] = useState(defaultFormData)
+    const { add, update, formData, formMode: stage, setStage } = React.useContext(TodoDataContext)
     const formRef = React.useRef()
-    const { add } = React.useContext(TodoDataContext)
+    // const [todoForm, setTodoForm] = useFormData()
+
+    React.useEffect(function handleFormEffect() {
+        // if (stage === 'edit') {
+        setForm(state => ({
+            ...state,
+            ...formData
+        }))
+        // setTodoForm(form)
+        // }
+    }, [formData, setForm])
 
     function submitHandler(e) {
         e.preventDefault()
-        add({
-            "id": (new Date()).getTime(),
-            "created_on": "",
-            "last_updated_on": "",
-            ...todoForm
-        })
-        formRef.current.reset()
+        if (stage === 'add') {
+            add({
+                "id": (new Date()).getTime(),
+                "created_on": "",
+                "last_updated_on": "",
+                ...form
+            })
+        } else if (stage === 'edit') {
+            debugger
+            update(form)
+            setStage('')
+        }
+
+        setForm(defaultFormData)
+        // formRef.current.reset()
     }
 
-    function changeHandler(event) {
-        const { name, value } = event.target
-        setTodoForm(state => ({ ...state, [name]: value }))
+    function changeHandler({ target }) {
+        const { name, value } = target
+        setForm(state => ({ ...state, [name]: value }))
+        // setTodoForm(state => ({ ...state, [name]: value }))
     }
 
-    console.log('form data', todoForm)
+    console.log('form data', form)
 
     return (
         <div>
-            <form ref={formRef} onChange={changeHandler} onSubmit={submitHandler}>
+            {/* <form ref={formRef} onChange={changeHandler} onSubmit={submitHandler}> */}
+            <form ref={formRef} onSubmit={submitHandler}>
                 <div>
                     <div>
                         <label htmlFor="task">Task</label>
                     </div>
-                    <input id="task" placeholder="Enter Task" name="task" type="text" />
+                    <input value={form?.task} id="task" onChange={changeHandler} placeholder="Enter Task" name="task" type="text" />
                 </div>
                 <div>
                     <div>
                         <label htmlFor="description">Description</label>
                     </div>
-                    <textarea id="description" placeholder="Description" name="description" ></textarea>
+                    <input value={form?.description} onChange={changeHandler} id="description" placeholder="Description" name="description" />
                 </div>
                 <div>
                     <div>
                         <label htmlFor="status">Status</label>
                     </div>
-                    <select name="status" id="status">
+                    <select name="status" id="status" value={form?.status} onChange={changeHandler}>
                         <option disabled value="">Select Status</option>
                         <option value="not-start">Not Start</option>
                         <option value="in-progress">In Progress</option>

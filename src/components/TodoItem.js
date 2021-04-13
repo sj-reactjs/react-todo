@@ -9,14 +9,15 @@ function TodoItem(props) {
         created_on,
         last_updated_on,
         remove,
-        update
+        setStage
     } = props
 
     return (
         <div role="listitem" className="todo-card">
             <div>
+                <span role="button" tabIndex="0" data-action="edit" onClick={() => setStage('edit', id)}>Edit</span>
                 <span className="created">{created_on !== '' ? created_on : 'N/A'}</span>
-                <span tabIndex="0" role="button" className="right close" >
+                <span role="button" tabIndex="0" className="right close" >
                     <span onClick={() => remove(id)}>x</span>
                 </span>
             </div>
