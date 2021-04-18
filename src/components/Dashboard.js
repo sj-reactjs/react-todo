@@ -1,5 +1,7 @@
 import React from 'react'
+import { startCase, camelCase } from 'lodash'
 import { TodoDataContext } from './../context/dataContext'
+
 
 export function getTodoStats(data) {
     const stats = {}
@@ -20,7 +22,7 @@ function Dashboard() {
         <div className="stats-card">
             {Object.keys(statCards).map((stat, i) => (
                 <span className="card" key={i}>
-                    <p>{stat}</p>
+                    <p>{startCase(camelCase(stat))}</p>
                     <p>{statCards[stat]}</p>
                 </span>
             ))}

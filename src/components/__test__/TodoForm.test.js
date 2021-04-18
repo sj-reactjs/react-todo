@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react'
+import { render, screen, fireEvent } from '@testing-library/react'
 import { TodoForm } from './../index'
 import { ThemeContextProvider } from './../../context/themeContext'
 import { DataContextProvider } from './../../context/dataContext'
@@ -17,24 +17,25 @@ describe(`Footer component`, () => {
         expect(asFragment()).toMatchSnapshot()
 
         const taskField = container.querySelector('input[id="task"]')
-        if (taskField) {
-            taskField.innerText = "new field"
-        }
+        fireEvent.change(taskField, { target: { value: 'new description' } })
+
         const descriptionField = container.querySelector('input[id="description"]')
-        descriptionField.innerText = "new desc"
+        fireEvent.change(descriptionField, { target: { value: 'new description' } })
 
         const selectField = container.querySelector('select[name="status"]')
-        selectField.value = "in-progress"
+        fireEvent.change(selectField, { target: { value: 'in-progress' } })
 
         const submitButton = container.querySelector('button[type="submit"]')
+        fireEvent.click(submitButton)
 
-        if (submitButton) {
-            submitButton.click()
-        }
+        // if (submitButton) {
+        //     submitButton.click()
+        // }
 
         const cancelButton = container.querySelector('button[type="button"]')
-        if (cancelButton) {
-            cancelButton.click()
-        }
+        fireEvent.click(cancelButton)
+        // if (cancelButton) {
+        //     cancelButton.click()
+        // }
     })
 })

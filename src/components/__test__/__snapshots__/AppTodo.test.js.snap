@@ -42,7 +42,7 @@ exports[`Header component render 1`] = `
         class="card"
       >
         <p>
-          not-start
+          Not Start
         </p>
         <p>
           2
@@ -52,7 +52,7 @@ exports[`Header component render 1`] = `
         class="card"
       >
         <p>
-          in-progess
+          In Progess
         </p>
         <p>
           1
@@ -62,7 +62,7 @@ exports[`Header component render 1`] = `
         class="card"
       >
         <p>
-          complete
+          Complete
         </p>
         <p>
           1
