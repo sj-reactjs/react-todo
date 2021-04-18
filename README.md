@@ -1,4 +1,5 @@
-<!--# Getting Started with Create React App
+<!-- [![YourActionName Actions Status](https://github.com/sj-reactjs/react-todo/workflows/{workflowName}/badge.svg)](https://github.com/sj-reactjs/react-todo/actions) -->
+# React Todo using Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -29,7 +30,7 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
+<!-- ### `yarn eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
