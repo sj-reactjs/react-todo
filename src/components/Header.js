@@ -27,7 +27,6 @@ function Header() {
             <span className="search-section">
                 <Search />
                 <button onClick={changeTheme}>Switch To <i className={`fa ${themeClass}`}></i></button>
-
             </span>
         </header>
     )

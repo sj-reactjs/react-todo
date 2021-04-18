@@ -8,13 +8,11 @@ describe(`Header component`, () => {
         const { asFragment, container } = render(<ThemeContextProvider><Header /></ThemeContextProvider>)
         const themeButton = container.querySelector('button')
         const buttonText = themeButton.innerHTML
-        console.log('aa', themeButton.innerText)
         expect(asFragment()).toMatchSnapshot()
         act(() => {
             themeButton.click()
         })
         const themeButtonUpdatedText = themeButton.innerText
-        console.log('bb', themeButton.innerText)
         expect(buttonText).not.toEqual(themeButtonUpdatedText)
     })
 })
