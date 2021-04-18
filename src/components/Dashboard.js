@@ -16,8 +16,13 @@ function Dashboard() {
     const { todoData } = React.useContext(TodoDataContext)
     const statCards = getTodoStats(todoData)
     return (
-        <div>
-            {Object.keys(statCards).map((stat, i) => <span className="card" key={i}><p>{stat}</p><p>{statCards[stat]}</p></span>)}
+        <div className="stats-card">
+            {Object.keys(statCards).map((stat, i) => (
+                <span className="card" key={i}>
+                    <p>{stat}</p>
+                    <p>{statCards[stat]}</p>
+                </span>
+            ))}
         </div>
     )
 }
