@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer component render 1`] = `
+<DocumentFragment>
+  <footer>
+    Footer !!
+  </footer>
+</DocumentFragment>
+`;

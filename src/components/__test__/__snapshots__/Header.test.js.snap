@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component render 1`] = `
+<DocumentFragment>
+  <div
+    class="todo-app theme-dark"
+  >
+    <header
+      class="header"
+    >
+      <button>
+        Switch To Light
+      </button>
+    </header>
+  </div>
+</DocumentFragment>
+`;

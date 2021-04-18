@@ -1,8 +1,18 @@
 import { render, screen } from '@testing-library/react';
-import App from './App';
+import App, { TodoApp } from './App';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+describe('App component test', () => {
+  it(`initaial render`, () => {
+    render(<App />);
+    const linkElement = screen.getByText(/loading.../i);
+    expect(linkElement).toBeInTheDocument();
+  });
+
+  it(`suspense test`, async () => {
+    const { asFragment } = render(<App />)
+
+    const delayDom = await asFragment(<App />)
+    expect(delayDom).toMatchSnapshot()
+
+  })
+})

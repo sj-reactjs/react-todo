@@ -4,11 +4,13 @@ import { TodoDataContext } from './../context/dataContext'
 export function getTodoStats(data) {
     const stats = {}
     data.forEach(todo => {
-        if (todo.status === '') {
+        if (!todo.status && todo.status === '') {
             stats['no-status'] = stats.hasOwnProperty('no-status') ? stats['no-status'] + 1 : 1
+        } else {
+            stats[todo.status] = stats.hasOwnProperty(todo.status) ? stats[todo.status] + 1 : 1
         }
-        stats[todo.status] = stats.hasOwnProperty(todo.status) ? stats[todo.status] + 1 : 1
     })
+    console.log('stats list', stats)
     return stats
 }
 
