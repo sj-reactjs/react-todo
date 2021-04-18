@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer component render 1`] = `
+<DocumentFragment>
+  <div
+    class="todo-app theme-dark"
+  >
+    <div>
+      <form>
+        <div>
+          <div>
+            <label
+              for="task"
+            >
+              Task
+            </label>
+          </div>
+          <input
+            id="task"
+            name="task"
+            placeholder="Enter Task"
+            type="text"
+            value=""
+          />
+        </div>
+        <div>
+          <div>
+            <label
+              for="description"
+            >
+              Description
+            </label>
+          </div>
+          <input
+            id="description"
+            name="description"
+            placeholder="Description"
+            value=""
+          />
+        </div>
+        <div>
+          <div>
+            <label
+              for="status"
+            >
+              Status
+            </label>
+          </div>
+          <select
+            id="status"
+            name="status"
+          >
+            <option
+              disabled=""
+              value=""
+            >
+              Select Status
+            </option>
+            <option
+              value="not-start"
+            >
+              Not Start
+            </option>
+            <option
+              value="in-progress"
+            >
+              In Progress
+            </option>
+            <option
+              value="complete"
+            >
+              Complete
+            </option>
+          </select>
+        </div>
+        <div>
+          <button
+            type="submit"
+          >
+            Submit
+          </button>
+          <button
+            type="button"
+          >
+            Cancel
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</DocumentFragment>
+`;

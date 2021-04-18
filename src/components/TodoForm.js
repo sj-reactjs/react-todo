@@ -49,8 +49,6 @@ function TodoForm() {
         // setTodoForm(state => ({ ...state, [name]: value }))
     }
 
-    console.log('form data', form)
-
     return (
         <div>
             {/* <form ref={formRef} onChange={changeHandler} onSubmit={submitHandler}> */}

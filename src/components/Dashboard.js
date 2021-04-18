@@ -10,7 +10,6 @@ export function getTodoStats(data) {
             stats[todo.status] = stats.hasOwnProperty(todo.status) ? stats[todo.status] + 1 : 1
         }
     })
-    console.log('stats list', stats)
     return stats
 }
 

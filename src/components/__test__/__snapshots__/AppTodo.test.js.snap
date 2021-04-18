@@ -8,9 +8,32 @@ exports[`Header component render 1`] = `
     <header
       class="header"
     >
-      <button>
-        Switch To Light
-      </button>
+      <span
+        class="logo"
+      >
+        <img
+          alt="react-todo-app"
+          data-todo-type="header-logo"
+          src="/logo192.png"
+        />
+      </span>
+      <span
+        class="search-section"
+      >
+        <input
+          placeholder="Search"
+          type="text"
+        />
+        <i
+          class="fa fa-search"
+        />
+        <button>
+          Switch To 
+          <i
+            class="fa fa-sun-o"
+          />
+        </button>
+      </span>
     </header>
     <div
       class="stats-card"
