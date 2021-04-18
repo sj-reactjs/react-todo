@@ -1,11 +1,16 @@
 ## Pending Tasks List
-## context 
-        [] Theme 
-        [] User-data
-        [] Header button - theme status     
-        [] Form coltrol testing
+## Unit Test cases
+- [&cross;] context 
+- [&cross;] Theme 
+- [&cross;] User-data
+- [&cross;] Header button - theme status     
+- [&cross;] Form coltrol testing
 ## Add feature 
-        [] PWA     
-        [] pre-push hook using husky
+ - [ &check; ] PWA     
+ - [&cross;] pre-push hook using husky
+
+<!-- Function | MySQL / MariaDB | PostgreSQL | SQLite
+:------------ | :-------------| :-------------| :-------------
+substr | :heavy_check_mark: |  :white_check_mark: | :heavy_check_mark:         -->
         
 
