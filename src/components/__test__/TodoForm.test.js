@@ -28,14 +28,8 @@ describe(`Footer component`, () => {
         const submitButton = container.querySelector('button[type="submit"]')
         fireEvent.click(submitButton)
 
-        // if (submitButton) {
-        //     submitButton.click()
-        // }
-
         const cancelButton = container.querySelector('button[type="button"]')
         fireEvent.click(cancelButton)
-        // if (cancelButton) {
-        //     cancelButton.click()
-        // }
+
     })
 })
