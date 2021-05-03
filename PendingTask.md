@@ -4,7 +4,8 @@
  - [✅ ] PWA    
  - [✅ ] Unit Tests
  - [❌] pre-push hook using husky
- - 
+ - [❌] cypress for testing
+
 ### Unit Test cases
 - [✅] Component
 - [✅] Form coltrol testing
