@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
+import useValidate from './../hooks/useValidate'
 // import useFormData from './../hooks/useFormData'
-import { TodoDataContext } from './../context/dataContext'
+// import { TodoDataContext } from './../context/dataContext'
 
 function TodoForm() {
     const defaultFormData = {
@@ -9,10 +10,38 @@ function TodoForm() {
         status: ''
     }
 
+    // const validationRule = [
+    //     {
+    //         field: 'task',
+    //         validation: {
+    //             required: "Field is required"
+    //         }
+    //     },
+    //     {
+    //         field: 'description',
+    //         validation: {
+    //             required: "Field is required"
+    //         }
+    //     },
+    //     {
+    //         field: 'status',
+    //         validation: {
+    //             required: "Field is required"
+    //         }
+    //     }
+    // ]
+
+    // const [isValid, setValid] = useState(false)
     const [form, setForm] = useState(defaultFormData)
     const { add, update, formData, formMode: stage, setStage } = React.useContext(TodoDataContext)
     const formRef = React.useRef()
     // const [todoForm, setTodoForm] = useFormData()
+    const violation = useValidate(validationRule, form);
+    // console.log(isValid)
+
+    // React.useEffect(() => {
+    //     setValid(violation)
+    // }, [violation])
 
     React.useEffect(function handleFormEffect() {
         // if (stage === 'edit') {
@@ -34,7 +63,6 @@ function TodoForm() {
                 ...form
             })
         } else if (stage === 'edit') {
-            debugger
             update(form)
             setStage('')
         }
