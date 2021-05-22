@@ -1,13 +1,19 @@
 ## Pending Tasks List
-## Unit Test cases
-- [&cross;] context 
-- [&cross;] Theme 
-- [&cross;] User-data
-- [&cross;] Header button - theme status     
-- [&cross;] Form coltrol testing
-## Add feature 
- - [ &check; ] PWA     
- - [&cross;] pre-push hook using husky
+
+### feature To Add 
+ - [✅ ] PWA    
+ - [✅ ] Unit Tests
+ - [❌] pre-push hook using husky
+ - [❌] cypress for testing
+
+### Unit Test cases
+- [✅] Component
+- [✅] Form coltrol testing
+- [❌] context 
+- [❌] Theme 
+- [❌] User-data
+- [❌] Header button - theme status     
+
 
 <!-- Function | MySQL / MariaDB | PostgreSQL | SQLite
 :------------ | :-------------| :-------------| :-------------

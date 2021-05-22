@@ -1,6 +1,26 @@
 <!-- [![YourActionName Actions Status](https://github.com/sj-reactjs/react-todo/workflows/{workflowName}/badge.svg)](https://github.com/sj-reactjs/react-todo/actions) -->
 # React Todo using Create React App
 
+## How to use
+- clone repository
+- install packages
+- yarn install
+- yarn test / yarn test:coverage
+
+## How to play on UI
+- yarn start
+- yarn build
+
+### Run build locally
+- serve -s build
+
+## Features used so far
+- Context API
+- React Hooks
+- Unit Test cases (Jest/React testing library)
+- PWA
+
+
 <!-- This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
