@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import useValidate from './../hooks/useValidate'
-import useFormData from './../hooks/useFormData'
+// import useValidate from './../hooks/useValidate'
+// import useFormData from './../hooks/useFormData'
 import { TodoDataContext } from './../context/dataContext'
 
 function TodoForm() {
