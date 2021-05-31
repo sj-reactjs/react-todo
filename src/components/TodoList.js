@@ -7,7 +7,7 @@ function TodoList() {
 
     return (
         <section role="list">
-            <div style={{ display: 'flex' }}>
+            <div className="todo-list">
                 {todoData.map((todo, index) => <TodoItem key={index} {...todo} remove={remove} setStage={setStage} />)}
             </div>
         </section>

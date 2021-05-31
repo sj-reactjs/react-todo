@@ -31,36 +31,25 @@ img[data-todo-type="header-logo"] {
   color: #fff;
 }
 
-.todo-app.theme-light {
+.todo-card {
   background-color: #fff;
   color: #000;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 40%);
+  margin: 1rem;
+  padding: 1rem;
+  transition: box-shadow 0.5s ease-in-out;
+  border: 1px solid #f4f4f4;
+  border-radius: 4px;
+}
+
+.todo-card:hover, .todo-card:focus {
+  box-shadow: 0 8px 16px 0 rgb(0 0 0 / 40%);
+  transition: box-shadow 0.5s ease-in-out;
 }
 
 .todo-app.theme-dark .todo-card {
-  width: 16.66%;
-  box-shadow: 0 4px 8px 0 rgb(255 255 255 / 40%);
-  margin: 1%;
-  /* border: 1px solid; */
-  padding: 1%;
-}
-.todo-app.theme-dark .todo-card:hover {
-  box-shadow: 0 8px 16px 0 rgba(255,255,255,0.4);
-}
-
-.todo-app.theme-light .todo-card {
-  width: 16.66%;
-  box-shadow: 0 4px 8px 0 rgb(0,0,0, 0.4);
-  margin: 1%;
-  /* border: 1px solid; */
-  padding: 1%;
-}
-
-.todo-app.theme-light .todo-card {
-  box-shadow: black;
-}
-
-.todo-app.theme-light .todo-card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4);
+  color: #000;
+  background-color: #fff;
 }
 
 .right{
@@ -74,7 +63,7 @@ img[data-todo-type="header-logo"] {
   justify-content: center;
 }
 
-.stats-card span.card{
+.stats-card .card{
   margin: 1rem;
   width: 20%;
   background-color: rgb(30, 95, 133);
@@ -98,3 +87,50 @@ button[type="submit"]:hover{
 button[type="cancel"]{
   background-color: #fff;
 }
+
+.todo-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.todo-list .todo-card {
+  flex: 1 0 25%; 
+  max-width: calc(25% - 4rem - 2px);
+}
+
+.card-actions  {
+  text-align: left;
+}
+.card-actions  div{
+  display:inline-block;
+  left: 0;
+  right: 0;
+  padding-right: 10%;
+}
+
+@media(max-width: 767px) {
+  .stats-card {
+    flex-direction: column;
+  }
+  .stats-card span.card {
+    width: 100%;
+    flex: 1 0 100%;
+    max-width: 100%;
+    margin: 0 0 1rem;
+  }
+
+  .todo-list {
+    flex-direction: column;
+    margin: 1rem;
+  }
+  
+  .todo-list .todo-card {
+    flex: 1 0 100%; 
+    max-width: 100%;
+    margin: 0 0 1rem;
+
+  }
+}
+
+
+

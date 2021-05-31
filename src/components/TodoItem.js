@@ -14,12 +14,14 @@ function TodoItem(props) {
 
     return (
         <div role="listitem" className="todo-card">
-            <div>
-                <span role="button" tabIndex="0" data-action="edit" onClick={() => setStage('edit', id)}>Edit</span>
-                <span className="created">{created_on !== '' ? created_on : 'N/A'}</span>
-                <span role="button" tabIndex="0" className="right close" >
-                    <span onClick={() => remove(id)}>x</span>
-                </span>
+            <div className="card-actions">
+                <div role="button" tabIndex="0" data-action="edit" onClick={() => setStage('edit', id)}>Edit</div>
+                <div className="created">
+                    <i className="fa fa-clock-o"></i>{created_on !== '' ? created_on : 'N/A'}
+                </div>
+                <div role="button" tabIndex="0" className="right close" onClick={() => remove(id)}>
+                    <i className={`fa fa-trash`}></i>
+                </div>
             </div>
             <div className="title">
                 <h3>{task}</h3>

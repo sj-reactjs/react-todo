@@ -4,6 +4,7 @@ import './App.css';
 export const TodoApp = React.lazy(() => import('./components/TodoApp'))
 
 function App() {
+  console.log('render');
   return (
     <div className="App">
       <React.Suspense fallback={<>Loading...</>}>
