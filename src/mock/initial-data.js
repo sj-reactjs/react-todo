@@ -32,3 +32,10 @@ export const defaultData = [
         "last_updated_on": "",
     }
 ]
+
+
+export const statusList = [
+    "not-start",
+    "in-progress",
+    "complete"
+]
